@@ -105,6 +105,29 @@ test('.ratingInterval() invokes .interval() function', () => {
   spy.mockRestore();
 });
 
+test('.ratingLowerBound() returns lower interval limit to 4 digits after the decimal', () => {
+  let result = WilsonScore.ratingLowerBound(2.5, 2, 1, 5);
+  result = parseFloat(result.toFixed(4));
+  const expected = parseFloat((1 + 4 * 0.007269).toFixed(4));
+  expect(result).toBe(expected);
+});
+
+test('.ratingLowerBound() returns with low confidence input', () => {
+  let result = WilsonScore.ratingLowerBound(2.0, 10, 0, 2, { confidence: 0.12 });
+  result = parseFloat(result.toFixed(4));
+  const expected = parseFloat((1.8770669044883168).toFixed(4));
+  expect(result).toBe(expected);
+});
+
+test('.ratingLowerBound() invokes .ratingInterval() function', () => {
+  const spy = jest.spyOn(WilsonScore, 'ratingInterval');
+  WilsonScore.ratingLowerBound(2.5, 2, 1, 5);
+
+  expect(spy).toHaveBeenCalled();
+
+  spy.mockRestore();
+});
+
 test('._pnorm() throws error if input is out of bounds', () => {
   const forceLessThanZero = () => WilsonScore._pnorm(-1);
   const forceGreaterThanOne = () => WilsonScore._pnorm(2);
