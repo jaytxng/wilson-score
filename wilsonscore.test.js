@@ -29,6 +29,21 @@ test('.interval() with correction disabled returns accurate result', () => {
   expect(result).toStrictEqual({ left: 0.6345, right: 0.7826 });
 });
 
+test('.interval() should return 0 limits if total is 0', () => {
+  const result = WilsonScore.interval(100, 0, { confidence: 0.95, correction: false });
+  expect(result).toStrictEqual({ left: 0, right: 0 });
+});
+
+test('.interval() should return 0 for left limit if phat is 0', () => {
+  const result = WilsonScore.interval(0, 100);
+  expect(result.left).toBe(0);
+});
+
+test('.interval() should return 1 for right limit if phat is 1', () => {
+  const result = WilsonScore.interval(100, 100);
+  expect(result.right).toBe(1);
+});
+
 test('.interval() invokes ._pnorm() function', () => {
   const spy = jest.spyOn(WilsonScore, '_pnorm');
   WilsonScore.interval(100, 140);
