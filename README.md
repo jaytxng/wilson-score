@@ -17,15 +17,17 @@ Simple, dependency-free JavaScript implementation of [Wilson score](https://en.w
 
 ## <a name="installation"></a>Installation
 ```js
-$ npm i @jaytong/wilsonscore
+$ npm i wilson-score-rank
 ```
+_or alternatively, you may clone the [wilsonscore.js](https://github.com/iamjaytong/wilson-score) file into your project._
 
 ## <a name="howtouse"></a>How To Use
 
 ### Binary Ratings
 
 ```js
-const wilsonScore = require('./wilsonscore');
+const wilsonscore = require('wilson-score-rank');
+// use `const wilsonScore = require('./wilsonscore');` if cloning the file
 
 // 100 positive ratings out of 140 with default confidence level at 95%
 wilsonScore.interval(100, 140); // { left: 0.6307737294693031, right: 0.7858148706178667 }

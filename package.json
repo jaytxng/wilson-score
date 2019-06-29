@@ -1,18 +1,19 @@
 {
-  "name": "@jaytong/wilsonscore",
-  "version": "1.0.0",
+  "name": "wilson-score-rank",
+  "version": "2.0.0",
   "description": "A simple and light Wilson score module",
   "main": "wilsonscore.js",
   "keywords": [
     "wilson",
     "score",
     "confidence",
-    "interval"
+    "interval",
+    "ranking"
   ],
   "scripts": {
     "test": "jest --coverage"
   },
-  "author": "",
+  "author": "Jay Tong",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^6.0.1",
