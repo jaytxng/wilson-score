@@ -4,6 +4,7 @@
 Simple, dependency-free JavaScript implementation of [Wilson score](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval). Useful wherever you want to make a confident estimate about the actions or preferences of a general population, given a sample of data (e.g. assigning scores for ranking [comments by upvotes](https://medium.com/hacking-and-gonzo/how-reddit-ranking-algorithms-work-ef111e33d0d9), products by popularity, [and more](#exampleusecases)).
 
 #### Table of Contents
+- [Installation](#installation)
 - [How To Use](#howtouse)
 - [Explanation](#explanation)
     - [Less technical](#lesstechnical)
@@ -13,6 +14,11 @@ Simple, dependency-free JavaScript implementation of [Wilson score](https://en.w
     - [Examples](#examples)
 - [Additional Resources](#resources)
 - [Contributing](#contributing)
+
+## <a name="installation"></a>Installation
+```js
+$ npm i @jaytong/wilsonscore
+```
 
 ## <a name="howtouse"></a>How To Use
 
