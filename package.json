@@ -1,5 +1,5 @@
 {
-  "name": "wilsonscore",
+  "name": "@greet/wilsonscore",
   "version": "1.0.0",
   "description": "",
   "main": "wilsonscore.js",
