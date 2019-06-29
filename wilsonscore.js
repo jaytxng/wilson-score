@@ -43,6 +43,10 @@ class WilsonScore {
     };
   }
 
+  static lowerBound(k, n, options = {}) {
+    return this.interval(k, n, options).left;
+  }
+
   static _pnorm(qn) {
     const b = [
       1.570796288,
