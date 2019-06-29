@@ -12,6 +12,8 @@
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.18.0",
+    "grunt": "^1.0.4",
+    "grunt-coveralls": "^2.0.0",
     "jest": "^24.8.0"
   }
 }
