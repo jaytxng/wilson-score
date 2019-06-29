@@ -38,4 +38,42 @@ test('.interval() invokes ._pnorm() function', () => {
   spy.mockRestore();
 });
 
+test('.lowerBound() returns lower interval limit to 4 digits after the decimal', () => {
+  let result = WilsonScore.lowerBound(100, 140, { confidence: 0.95, correction: true });
+  result = parseFloat(result.toFixed(4));
+  expect(result).toBe(0.6308);
+});
 
+test('.lowerBound() returns with low confidence input', () => {
+  let result = WilsonScore.lowerBound(100, 140, { confidence: 0.12 });
+  result = parseFloat(result.toFixed(4));
+  expect(result).toBe(0.7049);
+});
+
+test('.lowerBound() invokes .interval() function', () => {
+  const spy = jest.spyOn(WilsonScore, 'interval');
+  WilsonScore.lowerBound(100, 140);
+
+  expect(spy).toHaveBeenCalled();
+
+  spy.mockRestore();
+});
+
+test('._pnorm() throws error if input is out of bounds', () => {
+  const forceLessThanZero = () => WilsonScore._pnorm(-1);
+  const forceGreaterThanOne = () => WilsonScore._pnorm(2);
+  expect(forceLessThanZero).toThrowError(new Error('Error : qn <= 0 or qn >= 1  in pnorm()!'));
+  expect(forceGreaterThanOne).toThrowError(new Error('Error : qn <= 0 or qn >= 1  in pnorm()!'));
+});
+
+test('._pnorm() returns 0 when input is 0.5', () => {
+  const result = WilsonScore._pnorm(0.5);
+  expect(result).toEqual(0);
+});
+
+test('._pnorm() calculates z-scores accurately', () => {
+  const resultUnder = parseFloat(WilsonScore._pnorm(0.3).toFixed(3));
+  expect(resultUnder).toEqual(-0.524);
+  const resultOver = parseFloat(WilsonScore._pnorm(0.8).toFixed(3));
+  expect(resultOver).toEqual(0.842);
+});
