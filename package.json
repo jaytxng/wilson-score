@@ -1,13 +1,19 @@
 {
   "name": "@greet/wilsonscore",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple and light Wilson score module",
   "main": "wilsonscore.js",
+  "keywords": [
+    "wilson",
+    "score",
+    "confidence",
+    "interval"
+  ],
   "scripts": {
     "test": "jest --coverage"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
