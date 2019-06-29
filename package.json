@@ -1,5 +1,5 @@
 {
-  "name": "@greet/wilsonscore",
+  "name": "@jaytong/wilsonscore",
   "version": "1.0.0",
   "description": "A simple and light Wilson score module",
   "main": "wilsonscore.js",
