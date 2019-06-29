@@ -47,6 +47,18 @@ class WilsonScore {
     return this.interval(k, n, options).left;
   }
 
+  static ratingInterval(avg, n, minScore, maxScore, ...args) {
+    const lastArg = args[args.length - 1];
+    const options = lastArg && typeof lastArg === 'object' && lastArg.constructor === Object ? args.slice(-1)[0] : {};
+
+    const range = maxScore - minScore;
+    const interval = this.interval(n * (avg - minScore) / range, n, options);
+    return {
+      left: minScore + range * interval.left,
+      right: minScore + range * interval.right,
+    };
+  }
+
   static _pnorm(qn) {
     const b = [
       1.570796288,
