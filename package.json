@@ -1,6 +1,6 @@
 {
   "name": "wilson-score-rank",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A simple and light Wilson score module",
   "main": "wilsonscore.js",
   "keywords": [
