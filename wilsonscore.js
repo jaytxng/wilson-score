@@ -59,6 +59,10 @@ class WilsonScore {
     };
   }
 
+  static ratingLowerBound(avg, n, minScore, maxScore, options = {}) {
+    return this.ratingInterval(avg, n, minScore, maxScore, options).left;
+  }
+
   static _pnorm(qn) {
     const b = [
       1.570796288,
