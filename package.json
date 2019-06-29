@@ -4,7 +4,7 @@
   "description": "",
   "main": "wilsonscore.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
