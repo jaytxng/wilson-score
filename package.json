@@ -2,19 +2,16 @@
   "name": "wilson-score-rank",
   "version": "2.0.1",
   "description": "A simple and light Wilson score module",
+  "author": "Jay Tong",
+  "license": "MIT",
+  "repository": "https://github.com/iamjaytong/wilson-score",
   "main": "wilsonscore.js",
-  "keywords": [
-    "wilson",
-    "score",
-    "confidence",
-    "interval",
-    "ranking"
-  ],
   "scripts": {
     "test": "jest --coverage"
   },
-  "author": "Jay Tong",
-  "license": "MIT",
+  "files": [
+    "wilsonscore.js"
+  ],
   "devDependencies": {
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -22,5 +19,12 @@
     "grunt": "^1.0.4",
     "grunt-coveralls": "^2.0.0",
     "jest": "^24.8.0"
-  }
+  },
+  "keywords": [
+    "wilson",
+    "score",
+    "confidence",
+    "interval",
+    "ranking"
+  ]
 }

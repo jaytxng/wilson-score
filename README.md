@@ -1,7 +1,10 @@
-# Wilson Score Interval 
-[![CircleCI](https://circleci.com/gh/iamjaytong/wilson-score.svg?style=svg)](https://circleci.com/gh/iamjaytong/wilson-score) [![Coverage Status](https://coveralls.io/repos/github/iamjaytong/wilson-score/badge.svg?branch=master)](https://coveralls.io/github/iamjaytong/wilson-score?branch=master) [![Version](https://img.shields.io/badge/wilson--score--rank-v2.0.1-bright.svg)](https://github.com/iamjaytong/wilson-score) [![GitHub license](https://img.shields.io/github/license/iamjaytong/wilson-score.svg?color=brightgreen)](https://github.com/iamjaytong/wilson-score/blob/master/LICENSE)
+# Wilson Score Interval
+[![CircleCI](https://circleci.com/gh/iamjaytong/wilson-score.svg?style=svg)](https://circleci.com/gh/iamjaytong/wilson-score)
+[![Coverage Status](https://coveralls.io/repos/github/iamjaytong/wilson-score/badge.svg?branch=master)](https://coveralls.io/github/iamjaytong/wilson-score?branch=master)
+[![Version](https://img.shields.io/badge/wilson--score--rank-v2.0.1-bright.svg)](https://github.com/iamjaytong/wilson-score)
+[![GitHub license](https://img.shields.io/github/license/iamjaytong/wilson-score.svg?color=brightgreen)](https://github.com/iamjaytong/wilson-score/blob/master/LICENSE)
 
-Simple, dependency-free JavaScript implementation of [Wilson score](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval). Useful wherever you want to make a confident estimate about the actions or preferences of a general population, given a sample of data (e.g. assigning scores for ranking [comments by upvotes](https://medium.com/hacking-and-gonzo/how-reddit-ranking-algorithms-work-ef111e33d0d9), products by popularity, [and more](#exampleusecases)).
+Simple, dependency-free JavaScript implementation of [Wilson score](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval). Useful wherever you want to make a confident estimate about the actions or preferences of a general population, given a sample of data (e.g. assigning scores for ranking [comments by upvotes](https://medium.com/hacking-and-gonzo/how-reddit-ranking-algorithms-work-ef111e33d0d9), products by popularity, [and more](#usecases)).
 
 #### Table of Contents
 - [Installation](#installation)
@@ -19,7 +22,7 @@ Simple, dependency-free JavaScript implementation of [Wilson score](https://en.w
 ```js
 $ npm i wilson-score-rank
 ```
-_or alternatively, you may clone the [wilsonscore.js](https://github.com/iamjaytong/wilson-score) file into your project._
+_or alternatively, you may clone the [wilsonscore.js](https://github.com/iamjaytong/wilson-score/blob/master/wilsonscore.js) file into your project._
 
 ## <a name="howtouse"></a>How To Use
 
@@ -81,7 +84,8 @@ The Wilson score interval, developed by American mathematician [Edwin Bidwell Wi
 3. the probability of success is equal for each experiment;
 4. the trials are statistically independent.
 
-For more, please see the [Wikipedia page on the Wilson score interval](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval) and [this blog post](http://wordpress.mrreid.org/2014/05/20/ranking-ratings/).
+For more, please see the [Wikipedia page on the Wilson score interval](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval) and
+[this blog post](http://wordpress.mrreid.org/2014/05/20/ranking-ratings/).
 
 ## <a name="comparison"></a>Comparison with other scoring methods
 Using a simple calculation of `score = (positive ratings) - (negative ratings)` or `score = average rating = (positive ratings) / (total ratings)` proves to be problematic when working with smaller sample sizes, or differences in sample sizes across populations. See [this blog post comparing scoring methods for details and examples](http://www.evanmiller.org/how-not-to-sort-by-average-rating.html).
