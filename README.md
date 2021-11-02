@@ -106,6 +106,8 @@ You can even use it in cases where the data doesn't break cleanly into two speci
 - Creating a 'most shared' list (`wilsonScore(numShares / numTotalViews)`)
 - Spam/abuse detection (`wilsonScore(numMarkedSpam / numTotalVotes)`)
 
+_Credits to @csjiang for the explanation provided in their [PR](https://github.com/msn0/wilson-score-interval/pull/5/files)_
+
 ## <a name="resources"></a>Additional Resources
 
 - http://www.vassarstats.net/prop1.html
